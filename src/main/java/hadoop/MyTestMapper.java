@@ -87,8 +87,8 @@ public class MyTestMapper {
 		
 		FileInputFormat.addInputPath(job, new Path(INPUT_PATH));
 		FileOutputFormat.setOutputPath(job, new Path(OUTPUT_PATH));
-		System.out.println("********job设置完成************");
+//		System.out.println("********job设置完成************");
 		job.waitForCompletion(true);
-		System.out.println("********job提交************");
+//		System.out.println("********job提交************");
 	}
 }
