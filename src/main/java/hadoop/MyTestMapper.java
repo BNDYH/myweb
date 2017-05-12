@@ -67,7 +67,7 @@ public class MyTestMapper {
 		
 	}
 	public static void main(String[] args) throws Exception {
-		final String INPUT_PATH = "hdfs://192.168.4.185:9000/bndyh/input/hello.txt";
+		final String INPUT_PATH = "hdfs://192.168.4.185:9000/bndyh/input/hello";
 		final String OUTPUT_PATH = "hdfs://192.168.4.185:9000/bndyh/output";
 		final Configuration conf = new Configuration();
 		final Job job=new Job(conf);
@@ -75,7 +75,7 @@ public class MyTestMapper {
 		job.setJobName(MyTestMapper.class.getSimpleName());
 		job.setJarByClass(MyTestMapper.class);
 		
-		job.setNumReduceTasks(0);
+		job.setNumReduceTasks(1);
 		job.setPartitionerClass(MyPartitioner.class);
 		
 		job.setMapperClass(WordCountMapper.class);
